@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane style="-fx-background-color: linear-gradient(to top right,white, grey);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.MainWindowController">
+    <top>
+        <TabPane id="tabs" prefHeight="127.0" prefWidth="780.0" style="-fx-background-color: linear-gradient(to bottom right, gray, white);" stylesheets="@css/MainWindow.css" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="120.0" tabMaxWidth="1280.0" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab text="Image">
+                    <content>
+                        <AnchorPane id="tab" prefHeight="108.0" prefWidth="780.0">
+                            <children>
+                                <FlowPane id="tabPane" hgap="10.0" layoutY="-2.0" prefHeight="85.0" prefWidth="780.0" vgap="10.0">
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                    <children>
+                                        <Button fx:id="addImageButton" maxHeight="68.0" maxWidth="68.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#addImageButtonAction" prefHeight="68.0" prefWidth="68.0">
+                                            <graphic>
+                                                <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../icons/button/picture_add.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Open Image" />
+                                 </tooltip>
+                                        </Button>
+                                        <Button fx:id="saveImageButton" maxHeight="68.0" maxWidth="68.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#saveImageButtonAction" prefHeight="68.0" prefWidth="68.0">
+                                            <graphic>
+                                                <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../icons/button/picture_save.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Save Image" />
+                                 </tooltip>
+                                        </Button>
+                                        <Button fx:id="undoButton" maxHeight="68.0" maxWidth="68.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#undoButtonAction" prefHeight="68.0" prefWidth="68.0">
+                                            <graphic>
+                                                <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../icons/button/picture_undo.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Undo" />
+                                 </tooltip>
+                                        </Button>
+                                        <Button fx:id="redoButton" maxHeight="68.0" maxWidth="68.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#redoButtonAction" prefHeight="68.0" prefWidth="68.0">
+                                            <graphic>
+                                                <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../icons/button/picture_redo.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Redo" />
+                                 </tooltip>
+                                        </Button>
+                                        <Button fx:id="webcamButton" maxHeight="68.0" maxWidth="68.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#webcamButtonAction" prefHeight="68.0" prefWidth="68.0">
+                                            <graphic>
+                                                <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../icons/button/webcam_64.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Open Webcam" />
+                                 </tooltip>
+                                        </Button>
+                                        <Button fx:id="exitButton" maxHeight="68.0" maxWidth="68.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="68.0" prefWidth="68.0">
+                                            <graphic>
+                                                <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../icons/button/shutdown-icon.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Exit" />
+                                 </tooltip>
+                                        </Button>
+                                    </children>
+                                </FlowPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Adjustments">
+                    <content>
+                        <AnchorPane id="tab" prefHeight="108.0" prefWidth="780.0">
+                            <children>
+                                <FlowPane hgap="10.0" layoutX="-2.0" prefHeight="85.0" prefWidth="780.0" vgap="10.0">
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                    <children>
+                                        <Button fx:id="contrastButton" maxHeight="68.0" maxWidth="68.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#contrastButtonAction" prefHeight="68.0" prefWidth="68.0">
+                                            <graphic>
+                                                <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../icons/button/picture_contrast.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Adjust Contrast" />
+                                 </tooltip>
+                                        </Button>
+                                        <Button fx:id="brightnessButton" maxHeight="68.0" maxWidth="68.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#brightnessButtonAction" prefHeight="68.0" prefWidth="68.0">
+                                            <graphic>
+                                                <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../icons/button/picture_brightness.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Adjust brightness" />
+                                 </tooltip>
+                                        </Button>
+                                        <Button fx:id="sharpnessButton" maxHeight="68.0" maxWidth="68.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#sharpnessButtonAction" prefHeight="68.0" prefWidth="68.0">
+                                            <graphic>
+                                                <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../icons/button/picture_sharpen.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Adjust Sharpness" />
+                                 </tooltip>
+                                        </Button>
+                                        <Button fx:id="resizeButton" maxHeight="68.0" maxWidth="68.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#resizeButtonAction" prefHeight="68.0" prefWidth="68.0">
+                                            <graphic>
+                                                <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../icons/button/picture_resize.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Adjust Size" />
+                                 </tooltip>
+                                        </Button>
+                                        <Button fx:id="flipHorizontalButton" maxHeight="68.0" maxWidth="68.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#flipHorizontalButtonAction" prefHeight="68.0" prefWidth="68.0">
+                                            <graphic>
+                                                <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../icons/button/picture_fliphorizontal.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Flip Horizontal" />
+                                 </tooltip>
+                                        </Button>
+                                        <Button fx:id="flipVerticalButton" maxHeight="68.0" maxWidth="68.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#flipVerticalButtonAction" prefHeight="68.0" prefWidth="68.0">
+                                            <graphic>
+                                                <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../icons/button/picture_flipvertical.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Flip Vertical" />
+                                 </tooltip>
+                                        </Button>
+                                    </children>
+                                </FlowPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Effects">
+                    <content>
+                        <AnchorPane id="tab" prefHeight="108.0" prefWidth="780.0">
+                            <children>
+                                <FlowPane hgap="10.0" prefHeight="85.0" prefWidth="780.0" vgap="10.0">
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                    <children>
+                                        <Button fx:id="black_whiteButton" maxHeight="68.0" maxWidth="68.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#black_whiteButtonAction" prefHeight="68.0" prefWidth="68.0">
+                                            <graphic>
+                                                <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../icons/button/picture_blacknwhite.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Make Black and White" />
+                                 </tooltip>
+                                        </Button>
+                                        <Button fx:id="blurrButton" maxHeight="68.0" maxWidth="68.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#blurrButtonAction" prefHeight="68.0" prefWidth="68.0">
+                                            <graphic>
+                                                <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../icons/button/picture_blurr.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Blurr Image" />
+                                 </tooltip>
+                                        </Button>
+                                    </children>
+                                </FlowPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            <Tab text="Contact Us">
+               <content>
+                  <AnchorPane id="tab" prefHeight="108.0" prefWidth="780.0">
+                     <children>
+                        <FlowPane hgap="10.0" prefHeight="85.0" prefWidth="780.0" vgap="10.0">
+                           <children>
+                              <Button fx:id="faceBookButton" maxHeight="68.0" maxWidth="68.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#faceBookButtonAction" prefHeight="68.0" prefWidth="68.0">
+                                 <graphic>
+                                    <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/button/social/facebook.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Like us on  Facebook">
+                                       <graphic>
+                                          <Hyperlink text="http://www.facebook.com" />
+                                       </graphic></Tooltip>
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="yahooButton" maxHeight="68.0" maxWidth="68.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#yahooButtonAction" prefHeight="68.0" prefWidth="68.0">
+                                 <graphic>
+                                    <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/button/social/yahoo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="mail us on Yahoo" />
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="youtubeButton" maxHeight="68.0" maxWidth="68.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#youtubeButtonAction" prefHeight="68.0" prefWidth="68.0">
+                                 <graphic>
+                                    <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/button/social/youtube.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Follow us on Youtube" />
+                                 </tooltip>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </FlowPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            </tabs>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </TabPane>
+    </top>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+   <center>
+      <ImageView id="imageView" fx:id="imageView" fitHeight="500.0" fitWidth="780.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <Label fx:id="sizeText" text="Image Size:" BorderPane.alignment="BOTTOM_LEFT" />
+   </bottom>
+</BorderPane>

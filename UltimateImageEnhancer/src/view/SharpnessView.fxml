@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.SharpnessController">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <children>
+      <Separator layoutX="7.0" layoutY="57.0" prefHeight="8.0" prefWidth="592.0" />
+      <Separator layoutX="12.0" layoutY="339.0" prefHeight="0.0" prefWidth="583.0" />
+      <Slider fx:id="slider" layoutX="11.0" layoutY="21.0" majorTickUnit="2.0" max="10.0" min="1.0" minorTickCount="1" onDragDetected="#sliderAction" prefHeight="14.0" prefWidth="583.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" />
+      <ImageView fx:id="preView" fitHeight="269.0" fitWidth="580.0" layoutX="10.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="okButton" layoutX="378.0" layoutY="353.0" mnemonicParsing="false" onAction="#okButtonAction" text="Okay" />
+      <Button fx:id="cancelButton" layoutX="461.0" layoutY="353.0" mnemonicParsing="false" onAction="#cancelButtonAction" text="Cancel" />
+   </children>
+</AnchorPane>

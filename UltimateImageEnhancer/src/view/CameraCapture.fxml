@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.CameraCaptureController">
+   <children>
+      <FlowPane hgap="20.0" layoutX="14.0" layoutY="329.0" prefHeight="80.0" prefWidth="550.0">
+         <children>
+            <Button fx:id="playButton" mnemonicParsing="false" onAction="#playButtonAction" prefHeight="48.0" prefWidth="48.0">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/button/play.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="start webcam" />
+               </tooltip>
+            </Button>
+            <Button fx:id="stopButton" disable="true" mnemonicParsing="false" onAction="#stopButtonAction" prefHeight="48.0" prefWidth="48.0">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/button/stop.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="stop webcam" />
+               </tooltip>
+            </Button>
+            <Button fx:id="captureButton" disable="true" mnemonicParsing="false" onAction="#captureButtonAction" prefHeight="48.0" prefWidth="48.0">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/button/camera_capture.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="save image" />
+               </tooltip>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </FlowPane>
+      <Separator layoutX="-4.0" layoutY="326.0" prefHeight="1.0" prefWidth="600.0" />
+      <HBox layoutX="7.0" layoutY="14.0" prefHeight="308.0" prefWidth="587.0">
+         <children>
+            <ImageView fx:id="imageDisplay" fitHeight="309.0" fitWidth="587.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

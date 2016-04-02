@@ -1,0 +1,48 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 21, 2016, 8:08:12 PM
+    Author     : Electronics
+*/
+.border-pane{
+    -fx-padding: 10 10 10 10;
+    -fx-background-image:url("/view/css/Main_Background.png");
+}
+.tab{
+    -fx-background-color: linear-gradient(from 0% 0% to 50% 50%,darkgrey,grey);
+    -fx-border-radius: 20;
+    -fx-font: bold 14pt "Tahoma";
+    -fx-border-color:white;
+     border-style: solid;
+     -fx-text-fill: whitesmoke;
+}
+.tabs:focused{
+   -fx-background-color: linear-gradient(from 0% 0% to 50% 50%,lightgrey,white);
+    -fx-border-radius: 20;
+    -fx-font: bold 14pt "Tahoma";
+    -fx-border-color:white;
+     border-style: solid;
+     -fx-text-fill: whitesmoke; 
+}
+.tabs{
+    border-style: solid;
+    border-color: darkgray;
+    -fx-background-image:url("/view/css/Main_Background.png");
+}
+.tabPane{
+    -fx-background-color: linear-gradient(from 0% 0% to 50% 50%,darkgrey,grey);
+    -fx-blend-mode: multiply;
+    -fx-background-image:url("/view/css/Main_Background.png");
+}
+.button{
+    -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );
+}
+.imageView{
+  -fx-background-color: linear-gradient(from 0% 0% to 50% 50%,darkgrey,grey);  
+}
+.button:hover{
+    -fx-background-color: linear-gradient(from 0% 0% to 50% 50%,darkblue,lightblue);
+}
